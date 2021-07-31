@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fe914879.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
@@ -1035,6 +1035,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#addtlstls" class="md-nav__link">
+    addTls(tls) 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#protected-onvalidate" class="md-nav__link">
     protected onValidate() 
   </a>
@@ -1913,6 +1920,13 @@
         <li class="md-nav__item">
   <a href="#struct-ingressv1beta1rule" class="md-nav__link">
     struct IngressV1Beta1Rule  
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struct-ingressv1beta1tls" class="md-nav__link">
+    struct IngressV1Beta1Tls  
   </a>
   
 </li>
@@ -2719,6 +2733,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#addtlstls" class="md-nav__link">
+    addTls(tls) 
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#protected-onvalidate" class="md-nav__link">
     protected onValidate() 
   </a>
@@ -3602,6 +3623,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#struct-ingressv1beta1tls" class="md-nav__link">
+    struct IngressV1Beta1Tls  
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#struct-jobprops" class="md-nav__link">
     struct JobProps  
   </a>
@@ -3930,6 +3958,10 @@
 <tr>
 <td><a href="#cdk8s-plus-17-ingressv1beta1rule">IngressV1Beta1Rule</a></td>
 <td>Represents the rules mapping the paths under a specified host to the related backend services.</td>
+</tr>
+<tr>
+<td><a href="#cdk8s-plus-17-ingressv1beta1tls">IngressV1Beta1Tls</a></td>
+<td>Represents the TLS configuration mapping that is passed to the ingress controller for SSL termination.</td>
 </tr>
 <tr>
 <td><a href="#cdk8s-plus-17-jobprops">JobProps</a></td>
@@ -4496,6 +4528,7 @@ based virtual hosting etc.</p>
 <li><strong>metadata</strong> (<code><a href="#cdk8s-apiobjectmetadata">ApiObjectMetadata</a></code>)  Metadata that all persisted resources must have, which includes all objects users must create. <strong><em>Optional</em></strong></li>
 <li><strong>defaultBackend</strong> (<code><a href="#cdk8s-plus-17-ingressv1beta1backend">IngressV1Beta1Backend</a></code>)  The default backend services requests that do not match any rule. <strong><em>Optional</em></strong></li>
 <li><strong>rules</strong> (<code>Array&lt;<a href="#cdk8s-plus-17-ingressv1beta1rule">IngressV1Beta1Rule</a>&gt;</code>)  Routing rules for this ingress. <strong><em>Optional</em></strong></li>
+<li><strong>tls</strong> (<code>Array&lt;<a href="#cdk8s-plus-17-ingressv1beta1tls">IngressV1Beta1Tls</a>&gt;</code>)  TLS settings for this ingress. <strong><em>Optional</em></strong></li>
 </ul>
 <h3 id="properties_4">Properties<a class="headerlink" href="#properties_4" title="Permanent link">&para;</a></h3>
 <table>
@@ -4560,6 +4593,12 @@ targeted to this host name (the <code>Host</code> header matches this value).</p
 <li><strong>backend</strong> (<code><a href="#cdk8s-plus-17-ingressv1beta1backend">IngressV1Beta1Backend</a></code>)  Backend defines the referenced service endpoint to which the traffic will be forwarded to. </li>
 <li><strong>host</strong> (<code>string</code>)  Host is the fully qualified domain name of a network host, as defined by RFC 3986. <strong><em>Default</em></strong>: If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.</li>
 <li><strong>path</strong> (<code>string</code>)  Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional &ldquo;path&rdquo; part of a URL as defined by RFC 3986. Paths must begin with a &lsquo;/&rsquo;. <strong><em>Default</em></strong>: If unspecified, the path defaults to a catch all sending traffic to the backend.</li>
+</ul>
+<h4 id="addtlstls">addTls(tls) <a id="cdk8s-plus-17-ingressv1beta1-addtls"></a><a class="headerlink" href="#addtlstls" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">addTls</span><span class="p">(</span><span class="nx">tls</span>: <span class="kt">Array</span><span class="o">&lt;</span><span class="nx">IngressV1Beta1Tls</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span>
+</code></pre></div>
+<ul>
+<li><strong>tls</strong> (<code>Array&lt;<a href="#cdk8s-plus-17-ingressv1beta1tls">IngressV1Beta1Tls</a>&gt;</code>)  <em>No description</em></li>
 </ul>
 <h4 id="protected-onvalidate">protected onValidate() <a id="cdk8s-plus-17-ingressv1beta1-onvalidate"></a><a class="headerlink" href="#protected-onvalidate" title="Permanent link">&para;</a></h4>
 <p>(deprecated) Validate the current construct.</p>
@@ -6064,6 +6103,11 @@ any reason, the data in the emptyDir is deleted forever.</p>
 <td><code>Array&lt;<a href="#cdk8s-plus-17-ingressv1beta1rule">IngressV1Beta1Rule</a>&gt;</code></td>
 <td>Routing rules for this ingress.<br/><strong><em>Optional</em></strong></td>
 </tr>
+<tr>
+<td><strong>tls</strong>?</td>
+<td><code>Array&lt;<a href="#cdk8s-plus-17-ingressv1beta1tls">IngressV1Beta1Tls</a>&gt;</code></td>
+<td>TLS settings for this ingress.<br/><strong><em>Optional</em></strong></td>
+</tr>
 </tbody>
 </table>
 <h2 id="struct-ingressv1beta1rule">struct IngressV1Beta1Rule  <a id="cdk8s-plus-17-ingressv1beta1rule"></a><a class="headerlink" href="#struct-ingressv1beta1rule" title="Permanent link">&para;</a></h2>
@@ -6093,6 +6137,29 @@ then routed to the backend associated with the matching path.</p>
 <td><strong>path</strong>?</td>
 <td><code>string</code></td>
 <td>Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional &ldquo;path&rdquo; part of a URL as defined by RFC 3986. Paths must begin with a &lsquo;/&rsquo;.<br/><strong><em>Default</em></strong>: If unspecified, the path defaults to a catch all sending traffic to the backend.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="struct-ingressv1beta1tls">struct IngressV1Beta1Tls  <a id="cdk8s-plus-17-ingressv1beta1tls"></a><a class="headerlink" href="#struct-ingressv1beta1tls" title="Permanent link">&para;</a></h2>
+<p>Represents the TLS configuration mapping that is passed to the ingress controller for SSL termination.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>hosts</strong>?</td>
+<td><code>Array<string></code></td>
+<td>Hosts are a list of hosts included in the TLS certificate.<br/><strong><em>Default</em></strong>: If unspecified, it defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress.</td>
+</tr>
+<tr>
+<td><strong>secret</strong>?</td>
+<td><code><a href="#cdk8s-plus-17-isecret">ISecret</a></code></td>
+<td>Secret is the secret that contains the certificate and key used to terminate SSL traffic on 443.<br/><strong><em>Default</em></strong>: If unspecified, it allows SSL routing based on SNI hostname.</td>
 </tr>
 </tbody>
 </table>
@@ -6956,10 +7023,10 @@ The default is ClusterIP.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.716f8af4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
       
     
   </body>
