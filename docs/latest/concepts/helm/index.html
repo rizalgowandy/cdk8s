@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -1009,7 +1009,7 @@ Helm chart with sentinel containers enabled:</p>
   <span class="kr">constructor</span><span class="p">(</span><span class="nx">scope</span>: <span class="kt">Construct</span><span class="p">,</span> <span class="nx">id</span>: <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">super</span><span class="p">(</span><span class="nx">scope</span><span class="p">,</span> <span class="nx">id</span><span class="p">);</span>
 
-    <span class="kd">const</span> <span class="nx">redis</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Helm</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;redis&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">redis</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Helm</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;redis&#39;</span><span class="p">,</span> <span class="p">{</span>
       <span class="nx">chart</span><span class="o">:</span> <span class="s1">&#39;bitnami/redis&#39;</span><span class="p">,</span>
       <span class="nx">values</span><span class="o">:</span> <span class="p">{</span>
         <span class="nx">sentinel</span><span class="o">:</span> <span class="p">{</span>
@@ -1031,7 +1031,7 @@ can use the <code>apiObjects</code> property to find and interact with included 
 objects.</p>
 <p>The following example shows how to add an annotation to the Redis master
 deployment:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">master</span> <span class="o">=</span> <span class="nx">redis</span><span class="p">.</span><span class="nx">apiObjects</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">o</span> <span class="o">=&gt;</span> <span class="nx">o</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="s1">&#39;foo-redis-master&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">master</span> <span class="o">=</span> <span class="nx">redis</span><span class="p">.</span><span class="nx">apiObjects</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">o</span> <span class="p">=&gt;</span> <span class="nx">o</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="s1">&#39;foo-redis-master&#39;</span><span class="p">);</span>
 <span class="nx">master</span><span class="p">.</span><span class="nx">metadata</span><span class="p">.</span><span class="nx">addAnnotation</span><span class="p">(</span><span class="s1">&#39;my.annotation&#39;</span><span class="p">,</span> <span class="s1">&#39;hey-there&#39;</span><span class="p">);</span>
 </code></pre></div>
                 
@@ -1133,7 +1133,7 @@ deployment:</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
       
     
   </body>
