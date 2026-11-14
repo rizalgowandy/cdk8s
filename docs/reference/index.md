@@ -1,6 +1,35 @@
-# Overview
+# API reference
 
-This section includes API reference for the various components of CDK8s:
+This section includes API reference for the various components of cdk8s.
 
-- [cdk8s](./cdk8s.md): Core library
-- [cdk8s-plus-17](./cdk8s-plus-17.md): Intent-based APIs for Kubernetes resources. (spec version [1.17.0](https://github.com/kubernetes/kubernetes/tree/v1.17.0/api/openapi-spec))
+=== "TypeScript"
+
+    * [**cdk8s**](./cdk8s/typescript.md)
+    * [**cdk8s-plus-35**](./cdk8s-plus-35/typescript.md) · Kubernetes v1.35.0
+    * [**cdk8s-plus-36**](./cdk8s-plus-36/typescript.md) · Kubernetes v1.36.0
+    * [**cdk8s-plus-37**](./cdk8s-plus-37/typescript.md) · Kubernetes v1.37.0
+
+=== "Python"
+
+    * [**cdk8s**](./cdk8s/python.md)
+    * [**cdk8s-plus-35**](./cdk8s-plus-35/python.md) · Kubernetes v1.35.0
+    * [**cdk8s-plus-36**](./cdk8s-plus-36/python.md) · Kubernetes v1.36.0
+    * [**cdk8s-plus-37**](./cdk8s-plus-37/python.md) · Kubernetes v1.37.0
+
+=== "Java"
+
+    * [**cdk8s**](./cdk8s/java.md)
+    * [**cdk8s-plus-35**](./cdk8s-plus-35/java.md) · Kubernetes v1.35.0
+    * [**cdk8s-plus-36**](./cdk8s-plus-36/java.md) · Kubernetes v1.36.0
+    * [**cdk8s-plus-37**](./cdk8s-plus-37/java.md) · Kubernetes v1.37.0
+
+=== "Go"
+
+    * [**cdk8s**](./cdk8s/go.md)
+    * [**cdk8s-plus-35**](./cdk8s-plus-35/go.md) · Kubernetes v1.35.0
+    * [**cdk8s-plus-36**](./cdk8s-plus-36/go.md) · Kubernetes v1.36.0
+    * [**cdk8s-plus-37**](./cdk8s-plus-37/go.md) · Kubernetes v1.37.0
+
+!!! info
+
+    The documentation here relates to version `2.x` of the cdk8s tool-chain, which is the latest. If you are still using version `1.x`, please refer to the [Migrating from 1.x Guide](../migrating-from-1.x.md)
